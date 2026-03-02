@@ -86,7 +86,7 @@ public class DataInitService {
             em.persist(auteur4);
 
             em.getTransaction().commit();
-            System.out.println("Données initialisées avec succès !");
+            System.out.println("Données initialisées ");
 
         } catch (Exception e) {
             if (em.getTransaction().isActive()) {
