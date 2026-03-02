@@ -23,10 +23,10 @@ public class DataInitService {
             em.getTransaction().begin();
 
             // Création des catégories
-            Categorie roman = new Categorie("Roman", "Œuvres de fiction narrative");
-            Categorie scienceFiction = new Categorie("Science-Fiction", "Œuvres spéculatives basées sur des innovations scientifiques");
-            Categorie fantasy = new Categorie("Fantasy", "Œuvres mettant en scène un univers imaginaire");
-            Categorie policier = new Categorie("Policier", "Œuvres centrées sur la résolution d'une enquête");
+            Categorie roman = new Categorie("Roman", "Œuvres de fiction ");
+            Categorie scienceFiction = new Categorie("Science-Fiction", "Œuvres  basées sur des innovations scientifiques");
+            Categorie fantasy = new Categorie("Fantasy", "Œuvres  en scène un univers imaginaire");
+            Categorie policier = new Categorie("Policier", "Œuvres  sur la résolution d'une enquête");
             Categorie biographie = new Categorie("Biographie", "Récits de vie de personnalités");
 
             em.persist(roman);
@@ -36,12 +36,12 @@ public class DataInitService {
             em.persist(biographie);
 
             // Création des auteurs et de leurs livres
-            Auteur auteur1 = new Auteur("Hugo", "Victor", "victor.hugo@example.com");
-            Livre livre1 = new Livre("Les Misérables", 1862, "9782253096344");
+            Auteur auteur1 = new Auteur("Hugo", "hugo", "hugo.hugo@example.com");
+            Livre livre1 = new Livre("Les Misérables", 1962, "9782253096344");
             livre1.setResume("L'histoire de Jean Valjean, un ancien forçat qui tente de se racheter.");
             livre1.addCategorie(roman);
 
-            Livre livre2 = new Livre("Notre-Dame de Paris", 1831, "9782253096337");
+            Livre livre2 = new Livre("Notre-Dame de Paris", 1931, "9782253096337");
             livre2.setResume("L'histoire de Quasimodo, le sonneur de cloches bossu de Notre-Dame.");
             livre2.addCategorie(roman);
 
@@ -49,11 +49,11 @@ public class DataInitService {
             auteur1.addLivre(livre2);
 
             Auteur auteur2 = new Auteur("Asimov", "Isaac", "isaac.asimov@example.com");
-            Livre livre3 = new Livre("Fondation", 1951, "9782070415700");
+            Livre livre3 = new Livre("Fondation", 1931, "9782070415700");
             livre3.setResume("L'histoire de la Fondation, créée pour préserver la civilisation galactique.");
             livre3.addCategorie(scienceFiction);
 
-            Livre livre4 = new Livre("Les Robots", 1950, "9782290055120");
+            Livre livre4 = new Livre("Les Robots", 1946, "9782290055120");
             livre4.setResume("Recueil de nouvelles sur les robots et les Trois Lois de la robotique.");
             livre4.addCategorie(scienceFiction);
 
@@ -61,11 +61,11 @@ public class DataInitService {
             auteur2.addLivre(livre4);
 
             Auteur auteur3 = new Auteur("Tolkien", "J.R.R.", "jrr.tolkien@example.com");
-            Livre livre5 = new Livre("Le Seigneur des Anneaux", 1954, "9782070612888");
+            Livre livre5 = new Livre("Le Seigneur des Anneaux", 1994, "9782070612888");
             livre5.setResume("L'épopée de Frodon Sacquet pour détruire l'Anneau Unique.");
             livre5.addCategorie(fantasy);
 
-            Livre livre6 = new Livre("Le Hobbit", 1937, "9782075134156");
+            Livre livre6 = new Livre("Le Hobbit", 1977, "9782075134156");
             livre6.setResume("Les aventures de Bilbon Sacquet, recruté par le magicien Gandalf.");
             livre6.addCategorie(fantasy);
 
@@ -74,7 +74,7 @@ public class DataInitService {
 
             Auteur auteur4 = new Auteur("Christie", "Agatha", "agatha.christie@example.com");
             for (int i = 1; i <= 20; i++) {
-                Livre livre = new Livre("Mystère " + i, 1920 + i, "978020000000" + i);
+                Livre livre = new Livre("Mystère " + i, 1928 + i, "978020000000" + i);
                 livre.setResume("Un mystère à résoudre par Hercule Poirot ou Miss Marple.");
                 livre.addCategorie(policier);
                 auteur4.addLivre(livre);
